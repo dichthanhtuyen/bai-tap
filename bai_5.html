@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập bài 5</title>
+    <style>
+        form{font-family: Arial, Helvetica, sans-serif;}
+    </style>
+</head>
+
+<body>
+    <!-- bài 6 -->
+
+    <form action="https://www.google.com.vn/?hl=vi" method="get">
+        <table>
+            <tr>
+                <td>Username: </td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="password" name="Password"></td>
+            </tr>
+            <tr>
+                <td>City of employment: </td>
+                <td><input type="text" name="City"></td>
+            </tr>
+            <tr>
+                <td>Web server: </td>
+                <td>
+                    <select name="server" id="sv">
+                        <option value="">-- Choose a server --</option>
+                        <option value="sv1">Server 1</option>
+                        <option value="sv2">Server 2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Please specify your role: </td>
+                <td>
+                    <input type="radio" name="role" value="Admin">Admin <br>
+                    <input type="radio" name="role" value="Engineer">Engineer <br>
+                    <input type="radio" name="role" value="Manager">Manager <br>
+                    <input type="radio" name="role" value="Guest">Guest <br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Single Sign-on to the following: </td>
+                <td>
+                    <input type="checkbox" name="fn" value="Mail">Mail <br>
+                    <input type="checkbox" name="fn" value="Payroll">Payroll <br>
+                    <input type="checkbox" name="fn" value="Self-service">Self-service <br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="submit" value="Login">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+
+        // Bài 2: Tính 10 * (2 + ‘3’) - ‘30’ +  20 / ‘5’ - 1 - (‘11’ + 5 / ‘6’) . Viết các bước và kèm giải thích.
+        // 10*'23'-'30'+4-1-('11'+0.83)
+        // 230-'30'+4-1-110.83
+        // 200+4-1-110.83
+        // 92.17
+
+        // let a = 10 * (2 + '3') - '30' +  20 / '5' - 1 - ('11' + 5 / '6');
+        // alert(a);
+
+        // Bài 3: Nhập vào Tên của bạn và hiển thị ra màn hình.
+
+        // let name = prompt("nhập tên đi");
+        // document.write(name);
+
+        //Bài 4: Nhập vào hai số a và b. Kiểm tra xem:
+        //a có bằng b hay không.
+        //a có lớn hơn b hay không.
+        //a có khác b hay không.
+
+        // let a = 3,
+        //     b = 6;
+        //let c = a ==b;
+        //let c = a  > b;
+        //let c = a != b;
+        //alert(c);
+
+        // Bài 5: Nhập vào chiều dài và chiều rộng. Tính diện tích và chu vi hình chữ nhật.
+
+        // let d = 6,
+        //     r = 3;
+        //let CV = ( d + r ) *2;
+        // alert(CV);
+        // let S = d * r;
+        // alert(S);
+
+
+    </script>
+
+</body>
+
+</html>
