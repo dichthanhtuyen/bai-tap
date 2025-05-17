@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From currency</th>
+            <th>To currency</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="am"></td>
+            <td><select name="from" id="tu">
+                <option value="vn">VND</option>
+                <option value="usd">USD</option>
+            </select>
+            </td>
+            <td><select name="to" id="thanh">
+                <option value="usd">USD</option>
+                <option value="vn">VND</option>
+            </select>
+            </td>
+            <td>
+                <button onclick="chuyen()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <p id="kq"></p>
+
+    <script>
+    function chuyen() {
+      let amount = document.getElementById("am").value;
+      let from = document.getElementById("tu").value;
+      let to = document.getElementById("thanh").value;
+      let result;
+
+      if ( from == "vn" && to == "usd") {
+        result = "Result: " + (amount / 25000) + " USD";
+      }
+      else if ( from == "usd" && to == "vn") {
+        result = "Result: " + (amount * 25000) + " VND";
+      }
+      else if ( from == "vn") {
+        result = "Result: " + amount + " VND";
+      }
+      else if ( from == "usd") {
+        result = "Result: " + amount + " USD";
+      }
+      document.getElementById("kq").innerHTML = result;
+    }
+    </script> 
+</body>
+</html>
