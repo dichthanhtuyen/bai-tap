@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập codegymx</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><label>Toán: </label></td>
+            <td><input type="number" id="ma"></td>
+        </tr>
+        <tr>
+            <td><label>Lý: </label></td>
+            <td><input type="number" id="phy"></td>
+        </tr>
+        <tr>
+            <td><label>Hóa: </label></td>
+            <td><input type="number" id="che"></td>
+        </tr>
+    </table>
+    <button onclick="tinhTB()">Điểm trung bình</button>
+    <p id="dtb"></p><br>
+    <button onclick="tongdiem()">Tổng điểm</button>
+    <p id="td"></p><br>
+
+    <script>
+
+
+        function tinhTB() {
+            let a = Number(document.getElementById("ma").value);
+            let b = Number(document.getElementById("phy").value);
+            let c = Number(document.getElementById("che").value);
+            let dtb = ((a + b + c) / 3).toFixed(2);
+            document.getElementById("dtb").innerHTML = "Điểm trung bình: " + dtb;
+        }
+        function tongdiem() {
+            let a = Number(document.getElementById("ma").value);
+            let b = Number(document.getElementById("phy").value);
+            let c = Number(document.getElementById("che").value);
+            let td = a + b + c;
+            document.getElementById("td").innerHTML = "Tổng điểm: " + td;
+        }
+    </script>
+
+</html>
