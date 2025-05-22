@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diện tích tam giác vuông</title>
+</head>
+
+<body>
+    <h3>tính diện tích tam giác vuông</h3>
+    <label for="canh1">Cạnh huyền 1:</label>
+    <input type="text" id="canh1">
+    <br>
+    <label for="canh2">Cạnh huyền 2:</label>
+    <input type="text" id="canh2">
+    <br>
+    <button type="button" onclick="tinh()">Tính diện tích</button>
+    <input type="text" id="dienTich" readonly>
+    <script>
+        function tinh() {
+            let canh1 = Number(document.getElementById("canh1").value);
+            let canh2 = Number(document.getElementById("canh2").value);
+            if (isNaN(canh1) || isNaN(canh2) || canh1 <= 0 || canh2 <= 0) {
+                alert("Vui lòng nhập số dương hợp lệ cho cả 2 cạnh.");
+                return;
+            }
+            let dienTich = canh1 * canh2 / 2;
+            document.getElementById("dienTich").value = dienTich + " m2";
+        }
+    </script>
+</body>
+
+</html>

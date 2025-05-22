@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển từ mét sang feet</title>
+</head>
+
+<body>
+    <p>Chuyển từ mét sang feet</p>
+    <label>Độ dài (mét):</label>
+    <input type="text" id="met" ><br>
+    <button onclick="chuyen()">chuyển</button><br>
+    <label>Độ dài (feet):</label>
+    <input type="text" id="feet">
+
+    <script>
+        function chuyen() {
+        let met = parseFloat(document.getElementById("met").value);
+        let feet = (met * 3.2808).toFixed(2);
+        document.getElementById("feet").value = feet;
+        }
+    </script>
+</body>
+
+</html>

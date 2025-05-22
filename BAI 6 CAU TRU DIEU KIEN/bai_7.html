@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giải phương trình bậc 2</title>
+</head>
+
+<body>
+    <h3>Giải phương trình bậc hai: ax² + bx + c = 0</h3>
+    <input type="text" id="a" placeholder="a">
+    <input type="text" id="b" placeholder="b">
+    <input type="text" id="c" placeholder="c">
+    <button onclick="giaiPT()">Giải</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function giaiPT() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let c = Number(document.getElementById("c").value);
+            let kq = document.getElementById("ketqua");
+
+            if (a === 0) {
+                kq.innerText = "Đây không phải phương trình bậc 2.";
+                return;
+            }
+
+            let delta = b * b - 4 * a * c;
+
+            if (delta < 0) {
+                kq.innerText = "Phương trình vô nghiệm.";
+            } else if (delta === 0) {
+                let x = -b / (2 * a);
+                kq.innerText = `Phương trình có nghiệm kép: x = ${x}`;
+            } else {
+                let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                kq.innerText = `Phương trình có 2 nghiệm phân biệt:\nx₁ = ${x1}, x₂ = ${x2}`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

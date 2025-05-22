@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển từ độ F sang độ C</title>
+</head>
+
+<body>
+    <p>Chuyển độ C sang độ F</p>
+    <label>Độ C:</label>
+    <input type="text" id="doc" oninput="chuyen()"><br>
+    <label>Độ F:</label>
+    <input type="text" id="dof">
+
+    <script>
+        function chuyen() {
+        let doC = parseInt(document.getElementById("doc").value);
+        let doF = doC * 9 / 5 + 32;
+        document.getElementById("dof").value = doF;
+        }
+    </script>
+</body>
+
+</html>

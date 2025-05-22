@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 1</title>
+</head>
+
+<body>
+    <p>Cho phương trình bậc 1:</p>
+    <input type="text" style="width: 40px;" id="a"> x +
+    <input type="text" style="width: 40px;" id="b"> =
+    <input type="text" style="width: 40px;" id="c">
+    <br><br>
+    <button type="button" onclick="tinh()">Giá trị của x là</button>
+    <input type="text" id="ketqua" style="width: auto;" readonly>
+    <script>
+        function tinh() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let c = document.getElementById("c").value;
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                alert("Vui lòng nhập số hợp lệ cho a, b, c!");
+                return;
+            }
+            if (a == 0) {
+                if (b != c) {
+                    document.getElementById("ketqua").value = "Phương trình vô nghiệm"
+                } else {
+                    document.getElementById("ketqua").value = "Phương trình vô số nghiệm"
+                }
+            } else {
+                let x = (c - b) / a;
+                document.getElementById("ketqua").value = x;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
