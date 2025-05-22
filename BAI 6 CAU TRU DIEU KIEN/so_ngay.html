@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số ngày</title>
+</head>
+
+<body>
+    <form>
+        <p>Số ngày trong tháng</p>
+        <input type="number" id="month">
+        <button onclick="ketqua()" type="button">Tính số ngày</button><br>
+        <p id="result">Đây là chỗ hiển thị kết quả</p>
+    
+    <script>
+        let jan = 1;
+        let feb = 2;
+        let mar = 3;
+        let apr = 4;
+        let may = 5;
+        let jun = 6;
+        let jul = 7;
+        let aug = 8;
+        let sep = 9;
+        let oct = 10;
+        let nov = 11;
+        let dec = 12;
+
+        function ketqua() {
+            let thang = Number(document.getElementById("month").value);
+            switch (thang) {
+                case jan:
+                case mar:
+                case may:
+                case jul:
+                case aug:
+                case oct:
+                case dec:
+                    document.getElementById("result").innerHTML = "Tháng" + thang + " có 31 ngày"
+                    break;
+                case apr:
+                case jun:
+                case sep:
+                case nov:
+                    document.getElementById("result").innerHTML = "Tháng" + thang + " có 30 ngày"
+                    break;
+                case feb:
+                    document.getElementById("result").innerHTML = "Tháng" + thang + " có 28 hoặc 29 ngày"
+                    break;
+                default:
+                    document.getElementById("result").innerHTML = "Xin vui lòng nhập lại"
+
+            }
+        }
+
+
+
+    </script>
+</form>
+
+
+</body>
+
+</html>

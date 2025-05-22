@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+tr,td {
+    text-align: center;
+    vertical-align: center;
+}
+button {
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    
+<table>
+    <tr>
+        <td colspan="4"><input type="text" id="result"></td>
+    </tr>
+    <tr>
+        <td><button type="button" value="1" onclick="getData(event)">1</button></td>
+        <td><button type="button" value="2" onclick="getData(event)">2</button></td>
+        <td><button type="button" value="3" onclick="getData(event)">3</button></td>
+        <td><button type="button" value="+" onclick="getData(event)">+</button></td>
+    </tr>
+     <tr>
+        <td><button type="button" value="4" onclick="getData(event)">4</button></td>
+        <td><button type="button" value="5" onclick="getData(event)">5</button></td>
+        <td><button type="button" value="6" onclick="getData(event)">6</button></td>
+        <td><button type="button" value="-" onclick="getData(event)">-</button></td>
+    </tr>
+     <tr>
+        <td><button type="button" value="7" onclick="getData(event)">7</button></td>
+        <td><button type="button" value="8" onclick="getData(event)">8</button></td>
+        <td><button type="button" value="9" onclick="getData(event)">9</button></td>
+        <td><button type="button" value="*" onclick="getData(event)">x</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="clearData()">C</button></td>
+        <td><button type="button" value="0" onclick="getData(event)">0</button></td>
+        <td><button type="button" onclick="ketqua()">=</button></td>
+        <td><button type="button" value="/" onclick="getData(event)">/</button></td>
+    </tr>
+</table>
+<script>
+    let phepTinh = '';
+    function getData(event) {
+        let newData =  event.target.value;
+        phepTinh = phepTinh + newData;
+        document.getElementById("result").value = phepTinh;
+    }
+    function ketqua() {
+        let ketqua = eval(phepTinh);
+        document.getElementById("result").value = ketqua;
+        phepTinh = "";
+    }
+    function clearData() {
+        document.getElementById("result").value = "";
+    }
+</script>
+
+</body>
+</html>

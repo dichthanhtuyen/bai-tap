@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you love me</title>
+    <style>
+    
+    </style>
+</head>
+
+<body>
+    <center style="margin: 200px;">
+    <div>
+        <h3>Do you love me ?</h3>
+        <button type="button" onclick="yes()">YES</button>
+        <button type="button" id="noBtn" style="position: absolute;" onmousemove="hoverBtn()">NO</button>
+    </div>
+</center>
+</body>
+<script>
+    function yes() {
+        alert("Me too he he!")
+    }
+    function hoverBtn() {
+     let letren = Math.random() * window.innerHeight;
+     let letrai = Math.random() * window.innerWidth;
+     document.getElementById("noBtn").style.top = letren + "px";
+     document.getElementById("noBtn").style.left = letrai + "px";
+
+
+    }
+
+</script>
+</html>
