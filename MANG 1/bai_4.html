@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let array = [1, 2, 3, 4, 5];
+        let dau = 0;
+        let cuoi = array.length - 1;
+        while (dau < cuoi) {
+            let x = array[dau];
+            array[dau] = array[cuoi];
+            array[cuoi] = x;
+            dau++;
+            cuoi--;
+        }
+        console.log(array);
+    </script>
+
+</body>
+
+</html>

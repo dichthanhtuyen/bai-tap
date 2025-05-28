@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let max = array[0];
+        let viTri = 0;
+        let sum = array[0];
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                viTri = i;
+                sum += array[i];
+
+            }
+        }
+        let average = sum/array.length;
+        console.log("số lớn nhất là: " + max + " ở vị trí số " + viTri);
+        console.log("giá trị trung bình của mảng là: " + average);
+
+    </script>
+
+</body>
+
+</html>

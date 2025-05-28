@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành 1</title>
+</head>
+<body>
+    
+<h2>Sample Screen</h2>
+<input type="text" id="input">
+<button type="button" onclick="add()">Add</button>
+<button type="button" onclick="display()">Display</button>
+<p id="hienthi"></p>
+
+<script>
+    let x = 0;
+    let array = Array();
+
+    function add() {
+        array[x]=document.getElementById("input").value;
+        x++;
+        document.getElementById("input").value = "";
+    }
+
+    function display() {
+        let e = "";
+        for(let i = 0; i < array.length; i++){
+            e += "Element " + i + " = " + array[i] + "<br/>";
+            document.getElementById("hienthi").innerHTML = e;
+        }
+    }
+</script>
+
+</body>
+</html>

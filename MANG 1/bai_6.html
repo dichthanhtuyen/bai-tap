@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let x = +prompt("nhập số để check");
+        let check = false;
+        for (i = 0; i < array.length; i++) {
+            if (x == array[i]) {
+                console.log(x + " is in the array");
+                check = true;
+                break;
+            }
+        }
+        if (!check) {
+            console.log(x + " is not in the array");
+        }
+    </script>
+
+</body>
+
+</html>
