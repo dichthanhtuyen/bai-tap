@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let chuoi1 = prompt("nhập chuỗi một");
+        let chuoi2 = prompt("nhập chuỗi hai");
+        let str1 = chuoi1.trim();
+        let str2 = chuoi2.trim();
+        let giong = true;
+        if (str1.length != str2.length) {
+            giong = false;
+        } else {
+            for (let i = 0; i < str1.length; i++) {
+                if (str1[i] !== str2[i]) {
+                    giong = false;
+                    break;
+                }
+            }
+        }
+        if (giong) {
+            console.log("Hai chuỗi nhập vào là giống nhau");
+        } else {
+            console.log("Hai chuỗi nhập vào là khác nhau");
+        }
+    </script>
+
+</body>
+
+</html>
