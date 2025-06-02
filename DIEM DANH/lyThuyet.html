@@ -1,0 +1,71 @@
+1. Nêu các cách khai báo biến.
+có 3 cách khai báo biến
+* let x = 1 (khai báo kiểu hiện đại, sử dụng nhiều)
+* var x = 1 (khai báo theo kiểu cũ hiện tại không còn dùng nhiều)
+* const x = 1 (khai báo hằng số, giá trị không đổi)
+
+2.Các kiểu dữ liệu đã được học (Nêu ví dụ về giá trị của chúng).
+* Chuỗi: khai báo trong nháy đơn hoặc nháy kép. VD: let age = 'tuoi';
+* Số: sử dụng số nguyên hoặc số thập phân. VD: let a = 18;
+* Boolean: chỉ có hai giá trị True hoặc False. VD: let isTrue = true;
+
+3.Làm sao để quy định kiểu dữ liệu cho 1 biến ?
+Javascript là ngôn ngữ kiểu động, kiểu dữ liệu của biến được xác định dựa vào giá trị mà nó được gán.
+
+4. Có những cách nào để hiển thị chữ hello ra từ JS (kèm ví dụ)
+* alert: Hiển thị dạng hộp thoại
+VD: alert("hello!")
+
+* console.log(): hiển thị ở devtool (console)
+VD: console.log("hello!")
+
+- document.write: Hiển trực tiếp ra web
+VD: document.write("hello!")
+
+- document.getElementById().innerHTML: Hiển thị trên 1 thẻ nào đó thông ID của nó
+VD: <h1 id="the1"></h1>
+<script>
+    document.getElementById("the1").innerHTML = "hello!";
+</script>
+
+5. Có những cách nào để nhập vào biến a với JS (kèm ví dụ)
+* prompt: Sử dụng nhập qua hộp thoại
+VD: let a = prompt("nhập dữ liệu vào đây")
+
+* Input: Lấy dữ liệu từ ô input qua id của nó và dùng sự kiện HTML để hiển thị
+<input type="text" id="nhap">
+    <button onclick="nhap()">nhập</button>
+<h1 id="hienthi"></h1>
+<script>
+    function nhap() {
+    let a = document.getElementById("nhap").value;
+    document.getElementById("hienthi").innerHTML = a;
+    }
+</script>
+
+6 In ra giao diện tương ứng thẻ h1, img, a từ JS (Ví dụ thay 1 link bất kì từ Js cho thẻ a).
+<script>
+  // 1. Tạo thẻ h1
+  let h1 = document.createElement("h1");
+  h1.textContent = "Đây là thẻ h1 được tạo bằng JavaScript";
+  document.body.appendChild(h1);
+
+  // 2. Tạo thẻ img
+  let img = document.createElement("img");
+  img.src = "https://via.placeholder.com/150"; // ảnh mẫu
+  img.alt = "Ảnh mẫu";
+  document.body.appendChild(img);
+
+  // 3. Tạo thẻ a (liên kết)
+  let a = document.createElement("a");
+  a.textContent = "Truy cập OpenAI";
+  a.href = "#"; // tạm thời
+  document.body.appendChild(document.createElement("br")); // xuống dòng
+  document.body.appendChild(a);
+
+  // 4. Thay đổi link từ JS
+  let linkMoi = "https://www.openai.com";
+  a.href = linkMoi;
+</script>
+
+
