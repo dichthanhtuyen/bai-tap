@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Cho một mảng bất kì đếm số lượng số nguyên tố có trong mảng.
+        let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            let uoc = 0;
+            for (let j = 1; j <= arr[i]; j++) {
+                if (arr[i] % j == 0) {
+                    uoc++;
+                }
+                
+            }
+            if(uoc===2){
+                    count++;
+                }
+
+        }
+        console.log(count);
+    </script>
+</body>
+
+</html>

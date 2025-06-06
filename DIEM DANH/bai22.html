@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Tìm các vị trí của min trong mảng.
+        let arr = [1, 2, 3, 4, 5, 1, 2, 6, 8, 9];
+        let min = arr[0];
+        let pos = [];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === min) {
+                pos.push(i);
+            }
+        }
+        console.log(" các vị trí của min là " + pos.join(", "));
+    </script>
+</body>
+
+</html>

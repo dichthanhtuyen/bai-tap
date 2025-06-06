@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Tìm min của các phần tử chẵn trong mảng.
+        let arr = [10, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let minEven = Infinity;
+        let found = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                if (arr[i] < minEven) {
+                    minEven = arr[i];
+                    found = true;
+                }
+            }
+        }
+        if (found) {
+            console.log("min của các phần tử chẵn là " + minEven);
+        } else {
+            console.log("mảng ko có số chẵn");
+        }
+    </script>
+</body>
+
+</html>
