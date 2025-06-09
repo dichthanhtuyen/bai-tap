@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2 = ["UrsaMinor", "Taurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+        function check(star) {
+            for (let i = 0; i < arr1.length; i++) {
+                if (star === arr1[i]) {
+                    return arr2[i];
+                }
+            }
+            return "Không có giá trị phù hợp";
+        }
+        let star = prompt("nhập chòm sao vào đây");
+        document.write(check(star));
+    </script>
+</body>
+
+</html>
