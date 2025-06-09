@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getFactorial(number) {
+            if (isNaN(number) || number < 0) {
+                alert("nhập lại số");
+            } else {
+                let factorial = 1;
+                for (let i = 1; i <= number; i++) {
+                    factorial *= i;
+                }
+                return factorial
+            }
+        }
+        let number = +prompt("nhập số vào đây");
+        alert(number + "! = " + getFactorial(number));
+    </script>
+</body>
+
+</html>

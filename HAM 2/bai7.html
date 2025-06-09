@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function swapArray(arr) {
+    let temp = arr[0];
+    arr[0] = arr[1];
+    arr[1] = temp;
+}
+
+let numbers = [];
+numbers[0] = +prompt("Nhập số thứ nhất:");
+numbers[1] = +prompt("Nhập số thứ hai:");
+
+swapArray(numbers);
+
+alert("Sau khi đổi chỗ: số thứ nhất = " + numbers[0] + ", số thứ hai = " + numbers[1]);
+    </script>
+</body>
+</html>
