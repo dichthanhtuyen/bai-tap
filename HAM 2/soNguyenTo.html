@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let a = +prompt("Tìm các số nguyên tố nhỏ hơn a. Nhập giá trị của a:")
+        // function isPrime(number) {
+        //     let factor = 0;
+        //     for (let i = 1; i <= number; i++) {
+        //         if (number % i === 0) {
+        //             factor++;
+        //         }
+        //     }
+        //     return factor == 2;
+        // }
+        // for (let j = 2; j <= a; j++) {
+        //     if (isPrime(j)) {
+        //         console.log("Các số nguyên tố là: " + j);
+        //     }
+        // }
+
+
+        let a = +prompt("Tìm các số nguyên tố nhỏ hơn a. Nhập giá trị của a:");
+
+        function isPrime(n) {
+            if (n < 2) return false;
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) return false;
+            }
+            return true;
+        }
+
+        for (let i = 2; i < a; i++) {
+            if (isPrime(i)) {
+                console.log("Số nguyên tố: " + i);
+            }
+        }
+        
+    </script>
+</body>
+
+</html>

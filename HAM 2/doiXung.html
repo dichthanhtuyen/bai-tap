@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPalindrome(word) {
+            if (word.length < 2) {
+                return true;
+            }
+            if (word[0] != word[word.length - 1]) {
+                return false;
+            }
+            return isPalindrome(word.slice(1, -1));
+
+        }
+        let input = prompt("nhập từ vào đây");
+        if (isPalindrome(input)) {
+            console.log(input + " là từ đối xứng");
+        } else {
+            console.log(input + " là từ không đối xứng");
+
+        }
+    </script>
+</body>
+
+</html>
