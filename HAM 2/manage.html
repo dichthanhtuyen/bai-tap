@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button {
+            background-color: rgb(43, 195, 76);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
+
 <body>
+    <h2>Add new product</h2>
+    <input type="text" placeholder="new product" id="newProduct">
+    <button onclick="add()">Add</button>
     
+    <!-- <h2>Edit product</h2>
+    <input type="text" placeholder="product" id="productdit">
+    <button onclick="">Add</button> -->
+    
+    <h2>Display all product</h2>
+    <table border="1">
+        <tr>
+            <th>Product name</th>
+            <th colspan="2">Action</th>
+        </tr>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+
+    <script src="manage.js"></script>
 </body>
+
 </html>
