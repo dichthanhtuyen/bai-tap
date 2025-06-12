@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // - Hoàn thành lại bài quản lý như đã demo (bắt buộc)
 // - Nâng cao:  Hoàn thành các tính năng nâng cao của bài quản lý:
 // + Tạo 1 ô input cho phép người dùng tìm kiếm theo tên (Nên tạo 1 mảng mới chứa dữ liệu tìm kiếm)
@@ -63,48 +62,3 @@ function search(){
     }
     document.getElementById("showdata").innerHTML = html
 }   
-=======
-let productNames = [];
-
-function getAllData() {
-    let html = '';
-    for (let i = 0; i < productNames.length; i++) {
-        html += `
-            <tr>
-                <td>${productNames[i]}</td>
-                <td><button onclick = "edit(${i})">edit</button></td>
-                <td><button onclick = "remove(${i})">delete</button></td>
-            </tr>
-            `
-    }
-    document.getElementById("data").innerHTML = html;
-
-}
-getAllData();
-
-function add() {
-    let newData = document.getElementById("newProduct").value;
-    productNames.push(newData);
-    getAllData()
-    document.getElementById("newProduct").value = '';
-}
-
-function remove(index) {
-    let isConfirm = confirm("are you sure ?");
-    if (isConfirm) {
-        productNames.splice(index, 1);
-        getAllData();
-    }
-}
-
-function edit(index){
-let newData = prompt("enter new name of "+ productNames[index]);
-if(newData){
-productNames[index] = newData;
-getAllData()
-}
-}
-
-
-
->>>>>>> 393c4b82c8384ec4ee385a961070e6dc88936b8a
