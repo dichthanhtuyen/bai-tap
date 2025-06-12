@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        button {
+            border-radius: 5px;
+            background-color: rgb(89, 161, 219);
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h3>Search</h3>
+    <input type="text" placeholder="Search product" id="name-search" oninput="search()">
+    <ul id="showdata"></ul>
+
+    <h3>Add new product</h3>
+    <input type="text" placeholder="New product" id="addProduct">
+    <button onclick="add()">Add</button>
+    <h3>Display all product</h3>
+    <table>
+        <tr>
+            <th>Product name</th>
+            <th colspan="2">Action</th>
+        </tr>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+
+    <script src="manage.js"></script>
 </body>
+
 </html>
