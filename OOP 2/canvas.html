@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+        <script>
+
+            //Vẽ đường thẳng
+            // let c = document.getElementById("myCanvas"); lấy phần tử <canvas>
+            // let ctx = c.getContext("2d"); lấy ngữ cảnh vẽ 2d, biến ctx đại diện cho bút vẽ
+            // ctx.moveTo(0, 0); di chuyển bút vẽ đến vị trí (0,0)
+            // ctx.lineTo(200, 100); Vẽ một đường từ điểm hiện tại (0, 0) đến (200, 100), nhưng chưa hiển thị lên canvas.
+            // ctx.stroke(); Vẽ nét đường đã tạo ở trên ra canvas
+
+            //Vẽ đường tròn
+            // let c = document.getElementById("myCanvas");  Lấy thẻ <canvas> có id="myCanvas"
+            // let ctx = c.getContext("2d"); Lấy ngữ cảnh vẽ 2D từ canvas
+            // ctx.beginPath(); Bắt đầu một đường vẽ mới
+            // ctx.arc(95, 50, 40, 0, 2 * Math.PI); Vẽ một hình cung tròn hoặc hình tròn: tọa độ x, y của tâm; bán kình, góc bắt đầu, góc kết thúc
+            // ctx.stroke(); Vẽ đường viền
+
+            //Vẽ chữ
+            // var c = document.getElementById("myCanvas");
+            // var ctx = c.getContext("2d");
+            // ctx.font = "30px Arial"; Thiết lập font chữ cho văn bản
+            // ctx.fillText("Hello World", 10, 50); Vẽ chữ "Hello World" tại vị trí x = 10 (cách mép trái 10px y = 50 (cách mép trên 50px
+
+            // Vẽ hiệu ứng gradient
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+
+            // Create gradient
+            var grd = ctx.createLinearGradient(0, 0, 200, 0);
+            grd.addColorStop(0, "red");
+            grd.addColorStop(1, "white");
+
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10, 10, 150, 80);
+        </script>
+    </canvas>
+</body>
+
+</html>

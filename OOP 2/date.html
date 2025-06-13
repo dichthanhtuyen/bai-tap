@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Date {
+            day;
+            month;
+            year;
+            constructor(day, month, year) {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+            getDay() {
+                return this.day;
+            }
+            getMonth() {
+                return this.month;
+            }
+            getYear() {
+                return this.year;
+            }
+            setDay(day) {
+                let newDay = +prompt("nhập ngày mới");
+                this.day = newDay;
+                return this.day;
+            }
+            setMonth(month) {
+                let newMonth = +prompt("nhập tháng mới");
+                this.month = newMonth;
+                return this.month;
+            }
+            setYear(year) {
+                let newYear = +prompt("nhập năm mới");
+                this.year = newYear;
+                return this.year;
+            }
+        }
+        let myDate = new Date(3,6,1997);
+        console.log(myDate.getDay());
+        console.log(myDate.getMonth());
+        console.log(myDate.getYear());
+        let newDay1 = myDate.setDay();
+        let newMonth1 = myDate.setMonth();
+        let newyear1 = myDate.setYear();
+        console.log("ngày mới là: "+newDay1 + "/" + newMonth1+
+            "/"+ newyear1)
+        
+
+    </script>
+</body>
+4
+
+</html>
