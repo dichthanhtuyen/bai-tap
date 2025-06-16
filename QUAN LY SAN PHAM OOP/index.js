@@ -1,7 +1,7 @@
 let myStore = new Store(1, "Shopee");
 
-function getAll() {
-    let list = myStore.getListProduct();
+function getAll(list) {
+
     let html = "";
     for (let i = 0; i < list.length; i++) {
         let product = list[i];
@@ -38,10 +38,24 @@ function deleteProduct(id) {
     navigateToHome();
 }
 
+function search() {
+    let nameSearch = document.getElementById("search-input").value;
+    let priceStart = +document.getElementById("price-start").value;
+    let priceEnd = +document.getElementById("price-end").value;
+    if(!priceStart) priceStart = -Infinity;
+    if(!priceEnd) priceEnd = Infinity;
+    let list = myStore.getListSearch(nameSearch, priceStart,priceEnd);
+    getAll(list);
+}
 
 function navigateToHome() {
     document.getElementById("ui").innerHTML = `
      <h2>Danh sách sản phẩm</h2>
+      <input type="text" placeholder="Tìm kiếm" id="search-input" oninput = "search()">
+      <input type="number" placeholder="Giá bắt đầu" id="price-start" oninput = "search()" >
+      <input type="number" placeholder="Giá kết thúc" id="price-end" oninput = "search()">
+      <br>
+      <br>
         <table border="1" style="border-collapse: collapse;">
             <tr>
                 <th>ID</th>
@@ -55,15 +69,17 @@ function navigateToHome() {
             </tbody>
         </table>  
     `
-    getAll();
+    myStore.getDataInStorage();
+    let list = myStore.getListProduct();
+    getAll(list);
 }
 
 function updateProduct(id) {
     let name = document.getElementById("name").value;
     let price = document.getElementById("price").value;
     let quantity = document.getElementById("quantity").value;
-    let p = new Product(id,name,price,quantity);
-    myStore.update(id,p); 
+    let p = new Product(id, name, price, quantity);
+    myStore.update(id, p);
     navigateToHome();
 }
 
