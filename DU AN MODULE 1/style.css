@@ -1,0 +1,18 @@
+div {
+    background-color: gray;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    list-style: none;
+}
+.userimage {
+    width: 40px;
+    height: 40px;
+}
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
