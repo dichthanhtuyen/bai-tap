@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
+
 <body>
-    
+
+    <center>
+        <h3>Cờ caro</h3>
+        <button onclick="renderBoard()">Restart</button>
+        <br>
+        <br>
+        <div id="board">
+
+        </div>
+    </center>
+
+    <script>
+        const size = 20;
+        let currentPlayer = "X";
+        let board = [];
+        function renderBoard() {
+            let table = '<table border="1" style="border-collapse: collapse;">';
+            for (let i = 0; i < size; i++) {
+                board[i] = [];
+                table += "<tr>";
+                for (let j = 0; j < size; j++) {
+                    board[i][j] = "";
+                    table += `<td id="cell-${i}-${j}" style="text-align: center; width: 20px; height: 20px;" onclick="handleClick(${i}, ${j})"></td>`;
+                }
+                table += "</tr>";
+            }
+            table += "</table>";
+            document.getElementById("board").innerHTML = table;
+        }
+        renderBoard();
+
+        function handleClick(row, col) {
+            if (board[row][col] !== "") return;
+            board[row][col] = currentPlayer;
+            document.getElementById(`cell-${row}-${col}`).innerText = currentPlayer;
+            if (checkWin(row, col)) {
+                alert(`Người chơi ${currentPlayer} thắng`);
+            }
+            currentPlayer = (currentPlayer === "X") ? "O" : "X";
+        }
+
+        function countSame(row, col, deltar, deltac) {
+            let count = 0;
+            let i = row + deltar;
+            let j = col + deltac;
+            while (i >= 0 && i < size && j >= 0 && j < size && board[i][j] === currentPlayer) {
+                count++;
+                i += deltar;
+                j += deltac;
+            }
+            return count;
+        }
+        function checkWin(row, col) {
+            return (
+                countSame(row, col, 0, -1) + countSame(row, col, 0, 1) >= 4 ||
+                countSame(row, col, 1, 0) + countSame(row, col, -1, 0) >= 4 ||
+                countSame(row, col, 1, 1) + countSame(row, col, -1, -1) >= 4 ||
+                countSame(row, col, 1, -1) + countSame(row, col, - 1, 1) >= 4
+            );
+        }
+
+    </script>
 </body>
+
 </html>
