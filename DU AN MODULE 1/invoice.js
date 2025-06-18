@@ -1,11 +1,20 @@
-class Invoice{
+class Invoice {
     id;
     customer;
-    listProduct;
-constructor(id,cutomer,listProduct){
-    this.id = id;
-    this.cutomer = cutomer;
-    this.listProduct = [];
+    listSellProduct;
+    constructor(id, customer) {
+        this.id = id;
+        this.customer = customer;
+        this.listSellProduct = [];
+    }
+    getListItem(){
+        return this.listSellProduct;
+    }
+
+    add(newItem){
+        this.listSellProduct.push(newItem);
+    }
 }
-}
+
+
 

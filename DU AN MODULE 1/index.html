@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <!-- Trang chủ -->
-    <div class="navbar">
+    <div class="navbar" style="background-color: gray;">
         <ul class="menu">
             <li>E-INVOICE</li>
             <li class="dropdown">HÓA ĐƠN</li>
@@ -21,7 +20,7 @@
     </div>
 
     <!-- TRANG CHỦ -->
-    <center>
+    <!-- <center>
     <h3>Danh sách hóa đơn điện tử</h3>
     <label>Từ ngày: </label><input type="date" id="fromDate">
     <label>Đến ngày: </label><input type="date" id="toDate">
@@ -48,41 +47,24 @@
                 </tr>
         </tbody>
     </table>
-    </center>
+    </center> -->
+
 
     <!-- TRANG CHI TIẾT HÓA ĐƠN -->
-    <!-- <H2 style="text-align: center;">HÓA ĐƠN BÁN HÀNG</H2>
-    <P>Thông tin chi tiết hóa đơn</P>
-    <label for="">Tên đơn vị </label><input type="text" placeholder="Nhập tên người mua">
-    <label for="">Mã số thuế </label><input type="text" placeholder="Nhập mã số thuế">
-    <label for="">Ngày hóa đơn</label><input type="date">
-    <br>
-    <br>
     <center>
-        <table border="1">
-            <tr>
-                <th>STT</th>
-                <th>Tên hàng hóa</th>
-                <th>Số lượng</th>
-                <th>Đơn giá</th>
-                <th>Thành tiền</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Dưa hấu</td>
-                <td>5</td>
-                <td>20000</td>
-                <td>100000</td>
-            </tr>
-            <tr>
-                <td colspan="4">Tổng tiền</td>
-                <td>100000</td>
-            </tr>
-        </table>
-    </center> -->
-<script src="index.js"></script>
-<script src="invoice.js"></script>
-<script src="product.js"></script>
+        <H2 style="text-align: center;">HÓA ĐƠN BÁN HÀNG</H2>
+        <button onclick="goToHome()">Chi tiết hóa đơn</button>
+        <button onclick="goToAdd()">Thêm hàng hóa</button>
+        <div id="homePage"> 
+
+        </div>
+
+    </center>
+    <script src="product.js"></script>
+    <script src="invoice.js"></script>
+    <script src="index.js"></script>
+
+
 </body>
 
 </html>

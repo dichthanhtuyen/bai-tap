@@ -1,0 +1,73 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th><th>Tên</th><th>Số lượng</th><th>Giá</th>
+            <th>Thành tiền</th><th>Thuế</th><th>Tiền thuế</th>
+        </tr>
+    </thead>
+    <tbody id="list_Item"></tbody>
+</table>
+
+<script>
+    class Product {
+        id;
+        name;
+        quantity;
+        price;
+        constructor(id, name, quantity, price) {
+            this.id = id;
+            this.name = name;
+            this.quantity = quantity;
+            this.price = price;
+        }
+    }
+
+    class Invoice {
+        id;
+        customer;
+        listSellProduct;
+        constructor(id, customer) {
+            let item1 = new Product(1, "Dưa hấu", 20, 17000);
+            let item2 = new Product(2, "Dưa lưới", 30, 35000);
+            this.id = id;
+            this.customer = customer;
+            this.listSellProduct = [item1, item2];
+        }
+    }
+
+    let newInvoice = new Invoice(1, 'Công ty A');
+
+    function getInvoiceData() {
+        let list = newInvoice.listSellProduct;
+        let html = "";
+        let grandTotal = 0;
+        for (let i = 0; i < list.length; i++) {
+            let item = list[i];
+            let amount = item.quantity * item.price;
+            let tax = amount * 0.10;
+            let total = amount + tax;
+            grandTotal += total;
+
+            html += `
+                <tr>
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.quantity}</td>
+                    <td>${item.price.toLocaleString()}</td>
+                    <td>${amount.toLocaleString()}</td>
+                    <td>10%</td>
+                    <td>${tax.toLocaleString()}</td>
+                </tr>`;
+        }
+
+        html += `
+            <tr>
+                <td colspan="6"><strong>Tổng tiền</strong></td>
+                <td><strong>${grandTotal.toLocaleString()}</strong></td>
+            </tr>`;
+
+        document.getElementById("list_Item").innerHTML = html;
+    }
+
+    window.onload = getInvoiceData;
+</script>
