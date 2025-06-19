@@ -24,6 +24,7 @@ function getInvoiceData() {
                 <td>${item.vat}</td>
                 <td>${tax.toLocaleString()}</td>
                 <td><button>Xóa</button></td>
+                <td><button>Sửa</button></td>
             </tr>
 `
     }
@@ -55,10 +56,10 @@ function addItem(){
     let vat = Number(document.getElementById("vat").value);
     let item = new Product(id,name,quantity,price,vat);
     newInvoice.add(item);
-    goToHome();
+    goToDetail();
 }
 
-function goToHome(){
+function goToDetail(){
     document.getElementById("homePage").innerHTML = `
     <P>Thông tin chi tiết hóa đơn</P>
         <label for="">Tên đơn vị </label><input type="text" placeholder="Nhập tên người mua">
