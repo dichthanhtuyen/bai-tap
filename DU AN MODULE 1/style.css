@@ -1,16 +1,27 @@
-
-ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    list-style: none;
-}
-.userimage {
-    width: 40px;
-    height: 40px;
-}
 table {
     border-collapse: collapse;
     text-align: center;
+}
+
+.login {
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+button{
+    width:80px;
+    height: 40px;
+    font-size: small;
 }

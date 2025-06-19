@@ -1,4 +1,4 @@
-class Product {
+class Item {
     id;
     name;
     quantity;
