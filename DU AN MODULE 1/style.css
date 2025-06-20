@@ -25,3 +25,12 @@ button{
     height: 40px;
     font-size: small;
 }
+.signin {
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 350px;
+    width: 450px;
+    background-color: gray;
+    color: white;
+    text-align:center;
+    }
