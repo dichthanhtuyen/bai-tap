@@ -55,7 +55,7 @@ class Invoice {
 
     getItemById(id) {
         for (let i = 0; i < this.listSellProduct.length; i++) {
-            if (id = this.listSellProduct[i].id) {
+            if (id === this.listSellProduct[i].id) {
                 return this.listSellProduct[i];
             }
         }

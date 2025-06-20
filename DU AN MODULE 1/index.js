@@ -117,8 +117,9 @@
         let isConfirm = confirm("Bạn đồng ý xóa?");
         if (isConfirm) {
             newInvoice.remove(id);
-        }
-        getInvoiceData();
+            let list = newInvoice.getListItem();
+            getInvoiceData(list);
+        }       
     }
 
     function searchItemByName() {
@@ -200,7 +201,7 @@
         let quantity = Number(document.getElementById("quantity").value);
         let price = Number(document.getElementById("price").value);
         let vat = Number(document.getElementById("vat").value);
-        let item = new Item(id, name, quantity, price, vat);
+        let item = new Item (id, name, quantity, price, vat);
         newInvoice.update(id, item);
         goToDetail();
     }
