@@ -17,11 +17,11 @@ function getAll(){
 }
 document.getElementById("listso").innerHTML = html;
 }
-getAll();
 
 function goToThem(){
     document.getElementById("them").innerHTML =`
     <h3>Thêm khoản vay</h3>
+    <center>
         <input type="text" placeholder="Mã sổ" id="maso">
         <br>
         <input type="text" placeholder="Loại tiết kiệm" id="loai">
@@ -34,6 +34,9 @@ function goToThem(){
         <br>
         <input type="number" placeholder="Số tiền" id="sotien">
         <br>
+        <button onclick="themso()">Lưu</button>
+        <button onclick="navigateToHome()">Hủy</button>
+        </center>
     `
 }
 
@@ -51,6 +54,7 @@ function themso(){
 }
 
 function navigateToHome() {
+    document.getElementById("them").innerHTML = "";
     document.getElementById("ui").innerHTML =`
     <h2 style="text-align: center;">Thông tin sổ tiết kiệm</h3>
             <center>
