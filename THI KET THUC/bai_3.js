@@ -59,6 +59,7 @@ function navigateToHome() {
     <h2 style="text-align: center;">Thông tin sổ tiết kiệm</h3>
             <center>
                 <button onclick="goToThem()">Thêm sổ tiết kiệm</button>
+                <button onclick="goToXoa()">Xóa sổ tiết kiệm</button>
                 <br>
                 <br>
                 <table border="1" style="border-collapse: collapse; text-align: center;">
@@ -78,4 +79,37 @@ function navigateToHome() {
     `
 getAll()
 }
+
+function goToXoa() {
+  document.getElementById("them").innerHTML = `
+    <h3 style="text-align: center;">Xóa sổ tiết kiệm</h3>
+    <center>
+      <input type="text" id="masoXoa" placeholder="Nhập mã sổ cần xóa"><br><br>
+      <button onclick="xoaSo()">Xóa</button>
+      <button onclick="navigateToHome()">Hủy</button>
+    </center>
+  `;
+}
+
+function xoaSo() {
+  let maso = document.getElementById("masoXoa").value.trim();
+  if (!maso) {
+    alert("Vui lòng nhập mã sổ!");
+    return;
+  }
+
+  let index = list.findIndex(item => item.maso === maso);
+  if (index === -1) {
+    alert("Mã sổ không tồn tại. Vui lòng nhập lại!");
+    return;
+  }
+
+  let confirmXoa = confirm(`Bạn có chắc chắn muốn xóa sổ tiết kiệm mã số ${maso}?`);
+  if (confirmXoa) {
+    list.splice(index, 1);
+    alert("Xóa thành công!");
+    navigateToHome();
+  }
+}
+
 navigateToHome();
