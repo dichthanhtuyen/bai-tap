@@ -98,7 +98,13 @@ function xoaSo() {
     return;
   }
 
-  let index = list.findIndex(item => item.maso === maso);
+  let index = -1;
+for (let i = 0; i < list.length; i++) {
+  if (list[i].maso === maso) {
+    index = i;
+    break;
+  }
+}
   if (index === -1) {
     alert("Mã sổ không tồn tại. Vui lòng nhập lại!");
     return;
