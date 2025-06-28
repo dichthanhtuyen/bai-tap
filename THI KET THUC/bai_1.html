@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         Nhập từ bàn phím mảng số nguyên a gồm n phần tử (n<=50), đưa ra màn hình mảng 
+        // vừa nhập vào và 1 mảng mới b bao gồm tất cả các số nguyên tố của mảng a
+
+        let n = +prompt("Nhập số phần tử n (n <= 50):");
+        let a = [];
+        for (let i = 0; i < n; i++) {
+            a[i] = +prompt(`Nhập phần tử a[${i}]:`);
+        }
+        console.log("Mảng a vừa nhập: ", a);
+        let b = [];
+        for (let i = 0; i < a.length; i++) {
+            let uoc = 0;
+            for (let j = 1; j <= a[i]; j++) {
+                if (a[i] % j == 0) {
+                    uoc++;
+                }
+            }
+            if (uoc == 2) {
+                b.push(a[i]);
+            }
+        }
+        console.log("Mảng b các số nguyên tố: ", b);
+
+    </script>
+</body>
+
+</html>

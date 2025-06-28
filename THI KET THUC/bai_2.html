@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt("Nhập tử số 1");
+        let b = +prompt("Nhập mẫu số 1");
+        let c = +prompt("Nhập tử số 2");
+        let d = +prompt("Nhập mẫu số 2");
+        function fractionCheck(a, b, c, d) {
+            if (b === 0 || d === 0) {
+                alert("Nhâp lại mẫu số khác 0");
+                return;
+            }
+            if (a * d === b * c) {
+                console.log(`Phân số 1: ${a}/${b} bằng phân số 2: ${c}/${d}`);
+            }
+            else {
+                console.log(`Phân số 1: ${a}/${b} khác phân số 2: ${c}/${d}`);
+            }
+        }
+        fractionCheck(a, b, c, d);
+    </script>
+</body>
+
+</html>
