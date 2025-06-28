@@ -20,8 +20,8 @@ document.getElementById("listso").innerHTML = html;
 
 function goToThem(){
     document.getElementById("them").innerHTML =`
-    <h3>Thêm khoản vay</h3>
     <center>
+    <h3>Thêm Tổ tiết kiệm</h3>
         <input type="text" placeholder="Mã sổ" id="maso">
         <br>
         <input type="text" placeholder="Loại tiết kiệm" id="loai">
